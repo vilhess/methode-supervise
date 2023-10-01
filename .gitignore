@@ -1,0 +1,2 @@
+# does not push .ipynb_checkpoints
+*.ipynb_checkpoints
