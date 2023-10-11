@@ -1,2 +1,5 @@
 # does not push .ipynb_checkpoints
 *.ipynb_checkpoints
+
+# does not push the folder data/
+data/
