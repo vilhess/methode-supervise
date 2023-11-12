@@ -4,7 +4,10 @@ from sklearn.decomposition import PCA
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
+from dotenv import load_dotenv
 from sklearn.metrics import r2_score, accuracy_score, confusion_matrix, classification_report
+
+load_dotenv()
 
 st.markdown(f"<h1 style='text-align: center;'>Projet Supervisé Avancé</h1>",
             unsafe_allow_html=True)
@@ -16,7 +19,7 @@ probleme = st.sidebar.selectbox(
 
 if probleme == 'Régression':
 
-    data_train_reg_path = 'data/data_reg/wine_train.csv'
+    data_train_reg_path = os.getenv('WINE_TRAIN_PATH')
 
     df_train_reg = pd.read_csv(data_train_reg_path).drop('wine_ID', axis=1)
     st.table(df_train_reg.sample(5))
@@ -132,7 +135,7 @@ if probleme == 'Régression':
 
 else:
 
-    data_train_cla_path = 'data/data_cla/stars_train_new.csv'
+    data_train_cla_path = os.getenv('STAR_TRAIN_PATH')
 
     df_train_cla = pd.read_csv(data_train_cla_path).drop('obj_ID', axis=1)
     st.table(df_train_cla.sample(5))
