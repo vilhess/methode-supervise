@@ -8,8 +8,7 @@
 
 ### 1. Cloner le Repository
 ```bash
-git clone https://github.com/votre-utilisateur/votre-projet.git
-cd votre-projet
+git clone https://github.com/vilhess/methode-supervise.git
 ```
 
 ### 2. Installer les dépendances
@@ -27,6 +26,7 @@ Les notebooks où les codes sont renseignés se situent dans le dossier '/notebo
 ### 5. Visualisation avec Streamlit
 
 Il est possible de visualiser nos résulats sans avoir à run nos notebooks à l'aide de la commande à renseigner au niveau du terminal :
+
 ```bash
 streamlit run page.py
 ```
